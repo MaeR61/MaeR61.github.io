@@ -6,13 +6,13 @@
 }
 
 :root {
-    --bg-color: #0d0e12;
+    --bg-color: #0d1117;
     --text-color: #e6edf3;
-    --text-secondary: #a9a4b3;
-    --accent-color: #7b3fa3; /* koyu mor */
-    --accent-hover: #a67bff;  /* mor hover */
-    --border-color: #2b2430;
-    --card-bg: #121018;
+    --text-secondary: #8b949e;
+    --accent-color: #58a6ff;
+    --accent-hover: #79c0ff;
+    --border-color: #30363d;
+    --card-bg: #161b22;
 }
 
 body {
@@ -85,8 +85,8 @@ body {
 /* Header social küçük bölme */
 .header-socials {
     display: inline-flex;
-    gap: 10px;
-    margin-top: 18px;
+    gap: 8px;
+    margin-top: 16px;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
@@ -97,22 +97,30 @@ body {
     align-items: center;
     gap: 8px;
     padding: 6px 10px;
-    background-color: rgba(123, 63, 163, 0.05);
+    background-color: rgba(88, 166, 255, 0.04);
     border: 1px solid transparent;
     border-radius: 8px;
     color: var(--text-color);
     text-decoration: none;
     font-size: 0.95rem;
-    transition: all 0.2s ease;
+    transition: all 0.18s ease;
 }
 
 .header-socials .social-link.small:hover {
     border-color: var(--accent-color);
-    background-color: rgba(123, 63, 163, 0.12);
+    background-color: rgba(88, 166, 255, 0.10);
 }
 
 .header-socials .social-icon {
     font-size: 1.1rem;
+}
+
+.header-socials .social-svg {
+    width: 18px;
+    height: 18px;
+    display: inline-block;
+    vertical-align: middle;
+    color: var(--accent-color);
 }
 
 /* Section Styles */
@@ -251,7 +259,7 @@ body {
 
 .social-link:hover {
     border-color: var(--accent-color);
-    background-color: rgba(123, 63, 163, 0.06);
+    background-color: rgba(88, 166, 255, 0.06);
 }
 
 .social-icon {
@@ -311,5 +319,9 @@ body {
 
     .section h2 {
         font-size: 1.4rem;
+    }
+
+    .header-socials .social-text {
+        display: none; /* mobilde sadece ikon gösterebiliriz */
     }
 }
