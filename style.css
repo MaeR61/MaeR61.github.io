@@ -6,13 +6,13 @@
 }
 
 :root {
-    --bg-color: #0d1117;
+    --bg-color: #0d0e12;
     --text-color: #e6edf3;
-    --text-secondary: #8b949e;
-    --accent-color: #58a6ff;
-    --accent-hover: #79c0ff;
-    --border-color: #30363d;
-    --card-bg: #161b22;
+    --text-secondary: #a9a4b3;
+    --accent-color: #7b3fa3; /* koyu mor */
+    --accent-hover: #a67bff;  /* mor hover */
+    --border-color: #2b2430;
+    --card-bg: #121018;
 }
 
 body {
@@ -80,6 +80,39 @@ body {
     max-width: 600px;
     margin: 0 auto;
     line-height: 1.7;
+}
+
+/* Header social küçük bölme */
+.header-socials {
+    display: inline-flex;
+    gap: 10px;
+    margin-top: 18px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.header-socials .social-link.small {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 10px;
+    background-color: rgba(123, 63, 163, 0.05);
+    border: 1px solid transparent;
+    border-radius: 8px;
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: all 0.2s ease;
+}
+
+.header-socials .social-link.small:hover {
+    border-color: var(--accent-color);
+    background-color: rgba(123, 63, 163, 0.12);
+}
+
+.header-socials .social-icon {
+    font-size: 1.1rem;
 }
 
 /* Section Styles */
@@ -196,7 +229,7 @@ body {
     color: var(--accent-hover);
 }
 
-/* Socials Section */
+/* Socials Section (tekil olarak kullanýlýrsa) */
 .socials-container {
     display: flex;
     flex-direction: column;
@@ -218,7 +251,7 @@ body {
 
 .social-link:hover {
     border-color: var(--accent-color);
-    background-color: rgba(88, 166, 255, 0.1);
+    background-color: rgba(123, 63, 163, 0.06);
 }
 
 .social-icon {
