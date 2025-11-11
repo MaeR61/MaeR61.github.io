@@ -82,45 +82,56 @@ body {
     line-height: 1.7;
 }
 
-/* Header social küçük bölme */
+/* Header social küçük bölme - KÜÇÜK ve YAN YANA olacak þekilde */
 .header-socials {
-    display: inline-flex;
-    gap: 8px;
-    margin-top: 16px;
+    display: flex;
+    gap: 10px;
+    margin-top: 12px;
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
+    flex-wrap: nowrap; /* yan yana, taþarsa taþma yapmasýn */
 }
 
+/* Genel small sosyal link ayarlarý (küçültme ve hizalama) */
 .header-socials .social-link.small {
     display: inline-flex;
     align-items: center;
     gap: 8px;
-    padding: 6px 10px;
+    padding: 6px 8px;            /* küçük padding */
     background-color: rgba(88, 166, 255, 0.04);
     border: 1px solid transparent;
-    border-radius: 8px;
+    border-radius: 6px;
     color: var(--text-color);
     text-decoration: none;
-    font-size: 0.95rem;
-    transition: all 0.18s ease;
+    font-size: 0.9rem;           /* küçük yazý */
+    line-height: 1;
+    min-height: 28px;
+    min-width: 28px;
+    transition: all 0.16s ease;
 }
 
+/* Hover'da hafif vurgulama */
 .header-socials .social-link.small:hover {
     border-color: var(--accent-color);
     background-color: rgba(88, 166, 255, 0.10);
 }
 
-.header-socials .social-icon {
-    font-size: 1.1rem;
-}
-
+/* SVG ikon boyutu garanti altýna alýndý */
 .header-socials .social-svg {
     width: 18px;
     height: 18px;
     display: inline-block;
     vertical-align: middle;
     color: var(--accent-color);
+    flex-shrink: 0;
+}
+
+/* Ýsim / metin stili (küçük, ince) */
+.header-socials .social-text {
+    color: var(--text-secondary);
+    font-size: 0.85rem;
+    white-space: nowrap;
+    display: inline-block;
 }
 
 /* Section Styles */
@@ -321,7 +332,14 @@ body {
         font-size: 1.4rem;
     }
 
+    /* Mobilde isimleri gizle, sadece ikon göster */
     .header-socials .social-text {
-        display: none; /* mobilde sadece ikon gösterebiliriz */
+        display: none;
+    }
+
+    /* Ýkonlarý biraz daha küçük yap */
+    .header-socials .social-svg {
+        width: 16px;
+        height: 16px;
     }
 }
